@@ -1,15 +1,16 @@
 # kiosk-wm
-
 A super simple X11 window manager that centres and full-screens all windows. That's it! No
 keybindings, no dragging windows.
 
 ## kiosk-wm-run.sh
-
 A simple utility script to start kiosk-wm and run a command.
 
-Usage: `kiosk-wm-run.sh command`
+### Usage
+```
+kiosk-wm-run.sh command
+```
 
-Start kiosk-wm (also run startx if "$DISPLAY" == "") and execute `command`.
+Start kiosk-wm (or exec `startx $0 $@` if `"$DISPLAY" == ""`) and execute `command`.
 
 When `command` terminates, kiosk-wm will also be terminated.
 
